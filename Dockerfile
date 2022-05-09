@@ -4,7 +4,7 @@ RUN mkdir /build
 ADD . /build/
 WORKDIR /build
 
-RUN go build -o main .
+RUN go build -buildvcs=false -o main .
 
 FROM alpine
 
