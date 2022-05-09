@@ -25,7 +25,7 @@ func main() {
 			}
 		}
 		if r.Body != nil {
-			r.Body = io.NopCloser(io.TeeReader(r.Body, os.Stdout))
+			r.Body = io.NopCloser(io.TeeReader(r.Body, os.Stderr))
 		}
 		r.URL.Host = target.Host
 		r.URL.Scheme = target.Scheme
